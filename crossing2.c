@@ -8,14 +8,6 @@ void sort(int *d, int *e, long *cross, int start, int end)
     int i;
     int n_d = 0;
     int n_e = 0;
-    /*
-    printf("%d-%d center=%d\n",start,end,center);
-    for (i = 0; i <= 9; i++) {
-        printf("%d ", d[i]);
-    }
-    printf("\n ");
-    getchar();
-    */
 
     if (start == end)
         return;
@@ -54,7 +46,7 @@ int main(int argc, char *argv[])
 
     int *d;
     long cross = 0;
-    int i, j;
+    int i;
     d = (int *)malloc((n_data + 1) * sizeof(int));
     fp  = fopen(argv[1], "r");
     for (i = 1; i <= n_data; i++) {
@@ -63,7 +55,6 @@ int main(int argc, char *argv[])
     fclose(fp);
 
     int *e;
-    //    e = (int *)malloc((n_data + 1) / 2 * sizeof(int));
     e = (int *)malloc(n_data * sizeof(int));
 
     sort(d, e, &cross, 1, n_data);
