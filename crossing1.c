@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
             if (d[j] == i) {
                 cross += j - i;
                 d[j] = prev;
+                break;
             } else {
                 int tmp = d[j];
                 d[j] = prev;
